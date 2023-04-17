@@ -34,5 +34,4 @@ public class Partido {
                 ", resultado: " + golesEquipo1 +
                 " - " + golesEquipo2;
     }
-
 }

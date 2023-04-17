@@ -80,7 +80,6 @@ public class Main {
             resultados = leerResultados(rs);
 
             compararResultados(pronosticos, resultados);
-
          }
         catch (SQLException e){
             e.printStackTrace();
@@ -199,7 +198,7 @@ public class Main {
                     e.printStackTrace();
                 }
             }
-            try{
+            try {
             Persona persona = new Persona(participante, pronosticos, 0, 0, 0);
             personas.add(persona);
             } catch (Exception e) {
@@ -220,7 +219,6 @@ public class Main {
         String rutaConfig = "src/main/resources/config.json";
         Puntos puntos = objectMapper.readValue(Paths.get(rutaConfig).toFile(), Puntos.class);
         int aciertosPorRonda = 0;
-        String mensaje = "Puntos extra!";
 
         try{
             System.out.println("\nPuntos por persona:\n");
