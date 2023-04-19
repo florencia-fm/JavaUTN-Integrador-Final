@@ -219,7 +219,6 @@ public class Main {
         String rutaConfig = "src/main/resources/config.json";
         Puntos puntos = objectMapper.readValue(Paths.get(rutaConfig).toFile(), Puntos.class);
         int aciertosPorRonda = 0;
-
         try{
             System.out.println("\nPuntos por persona:\n");
             for (int i = 0; i < pronosticos.size(); i++) {
@@ -246,14 +245,15 @@ public class Main {
                                 }
                             }
                         }
-                        if (aciertosPorRonda == ronda.getPartidos().size()){
+                         if (aciertosPorRonda == ronda.getPartidos().size()){
                             persona.setRondasAcertadas(persona.getRondasAcertadas() + 1);
                             persona.setPuntos(persona.getPuntos() + puntos.getPuntosExtra());
-                            aciertosPorRonda = 0;
+                             aciertosPorRonda = 0;
                         }
                     }
                 }
-                System.out.println(persona.getNombre() + ": "
+                aciertosPorRonda = 0;
+                 System.out.println(persona.getNombre() + ": "
                         + "\n- Puntos: " + persona.getPuntos()
                         + "\n- Aciertos: "
                         + persona.getAciertos()
