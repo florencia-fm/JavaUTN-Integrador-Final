@@ -119,7 +119,6 @@ public class Main {
                     Partido partido = new Partido(equipo1, equipo2);
                     partido.setGolesEquipo1(cantGoles1);
                     partido.setGolesEquipo2(cantGoles2);
-                    partido.resultado();
                     partidos.add(partido);
                 }
                 catch (Exception e){
