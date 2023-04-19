@@ -23,14 +23,18 @@ TRUNCATE TABLE Resultados;
 /*Insertando datos en la tabla Pronosticos*/
 
 INSERT INTO Pronosticos (participante, equipo1, resultado, equipo2) VALUES
-('Mariana', 'Argentina', 'Gana 2', 'Arabia Saudita'),
+('Mariana', 'Argentina', 'Gana 1', 'Arabia Saudita'),
 ('Mariana', 'Polonia', 'Empata', 'México'),
 ('Mariana', 'Argentina', 'Gana 1', 'México'),
 ('Mariana', 'Arabia Saudita', 'Gana 2', 'Polonia'),
+('Mariana', 'Argentina', 'Gana 2', 'Polonia'),
+('Mariana', 'Arabia Saudita', 'Gana 2', 'México'),
 ('Pedro', 'Argentina', 'Gana 1', 'Arabia Saudita'),
 ('Pedro', 'Polonia', 'Gana 2', 'México'),
 ('Pedro', 'Argentina', 'Gana 1', 'México'),
-('Pedro', 'Arabia Saudita', 'Empata', 'Polonia');
+('Pedro', 'Arabia Saudita', 'Empata', 'Polonia'),
+('Pedro', 'Argentina', 'Gana 1', 'Polonia'),
+('Pedro', 'Arabia Saudita', 'Gana 1', 'México');
 /*Si quieren agregar mas datos, simplemente sigan agregando tuplas antes del ';' */
 
 
@@ -39,6 +43,8 @@ INSERT INTO Pronosticos (participante, equipo1, resultado, equipo2) VALUES
 INSERT INTO Resultados (ronda, equipo1, cantGoles1, cantGoles2, equipo2) VALUES
 (1, 'Argentina', 1, 2, 'Arabia Saudita'),
 (1, 'Polonia', 0, 0 , 'México'),
-(1, 'Argentina', 2, 0, 'México'),
-(1, 'Arabia Saudita', 0, 2, 'Polonia');
+(2, 'Argentina', 2, 0, 'México'),
+(2, 'Arabia Saudita', 0, 2, 'Polonia'),
+(3, 'Argentina', 2, 0, 'Polonia'),
+(3, 'Arabia Saudita', 2, 0, 'México');
 /*Si quieren agregar mas datos, simplemente sigan agregando tuplas antes del ';' */

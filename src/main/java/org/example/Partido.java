@@ -15,7 +15,7 @@ public class Partido {
     private Integer golesEquipo2;
 
     // Métodos
-     public ResultadoEnum resultado(int golesEquipo1, int golesEquipo2) {
+     public ResultadoEnum resultado() {
          if (golesEquipo1 > golesEquipo2) {
              return ResultadoEnum.GANA_EQUIPO1;
          } else if (golesEquipo2 > golesEquipo1) {

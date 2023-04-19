@@ -119,7 +119,7 @@ public class Main {
                     Partido partido = new Partido(equipo1, equipo2);
                     partido.setGolesEquipo1(cantGoles1);
                     partido.setGolesEquipo2(cantGoles2);
-                    partido.resultado(cantGoles1, cantGoles2);
+                    partido.resultado();
                     partidos.add(partido);
                 }
                 catch (Exception e){
@@ -230,15 +230,15 @@ public class Main {
                         for (int l = 0; l < ronda.getPartidos().size(); l++) {
                             Partido partido = (Partido) ronda.getPartidos().get(l);
                             if (pronostico.getPartido().getEquipo1().getNombre().equals(partido.getEquipo1().getNombre()) && pronostico.getPartido().getEquipo2().getNombre().equals(partido.getEquipo2().getNombre())) {
-                                if (pronostico.getResultado().equals(ResultadoEnum.GANA_EQUIPO1) && partido.resultado(partido.getGolesEquipo1(), partido.getGolesEquipo2()).equals(ResultadoEnum.GANA_EQUIPO1)) {
+                                if (pronostico.getResultado().equals(ResultadoEnum.GANA_EQUIPO1) && partido.resultado().equals(ResultadoEnum.GANA_EQUIPO1)) {
                                     persona.setPuntos(persona.getPuntos() + puntos.getPuntosPorAcierto());
                                     persona.setAciertos(persona.getAciertos() + 1);
                                     aciertosPorRonda += 1;
-                                } else if (pronostico.getResultado().equals(ResultadoEnum.EMPATE) && partido.resultado(partido.getGolesEquipo1(), partido.getGolesEquipo2()).equals(ResultadoEnum.EMPATE)) {
+                                } else if (pronostico.getResultado().equals(ResultadoEnum.EMPATE) && partido.resultado().equals(ResultadoEnum.EMPATE)) {
                                     persona.setPuntos(persona.getPuntos() + puntos.getPuntosPorAcierto());
                                     persona.setAciertos(persona.getAciertos() + 1);
                                     aciertosPorRonda += 1;
-                                } else if (pronostico.getResultado().equals(ResultadoEnum.GANA_EQUIPO2) && partido.resultado(partido.getGolesEquipo1(), partido.getGolesEquipo2()).equals(ResultadoEnum.GANA_EQUIPO2)) {
+                                } else if (pronostico.getResultado().equals(ResultadoEnum.GANA_EQUIPO2) && partido.resultado().equals(ResultadoEnum.GANA_EQUIPO2)) {
                                     persona.setPuntos(persona.getPuntos() + puntos.getPuntosPorAcierto());
                                     persona.setAciertos(persona.getAciertos() + 1);
                                     aciertosPorRonda += 1;
